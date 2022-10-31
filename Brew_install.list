@@ -1,0 +1,34 @@
+autojump: Shell extension to jump to frequently used directories
+awscli: Official Amazon AWS command-line interface
+azure-cli: Microsoft Azure CLI 2.0
+bat: Clone of cat(1) with syntax highlighting and Git integration
+broot: New way to see and navigate directory trees
+cask: Emacs dependency management
+docker: Pack, ship and run any application as a lightweight container
+eksctl: Simple command-line tool for creating clusters on Amazon EKS
+exa: Modern replacement for 'ls'
+ffmpeg: Play, record, convert, and stream audio and video
+git: Distributed revision control system
+gnu-sed: GNU implementation of the famous stream editor
+groovy: Java-based scripting language
+htop: Improved top (interactive process viewer)
+jq: Lightweight and flexible command-line JSON processor
+kind: Run local Kubernetes cluster in Docker
+kustomize: Template-free customization of Kubernetes YAML manifests
+mas: Mac App Store command-line interface
+maven: Java-based project management
+minikube: Run a Kubernetes cluster locally
+ncdu: NCurses Disk Usage
+openssl@3: Cryptography and SSL/TLS Toolkit
+pass-otp: Pass extension for managing one-time-password tokens
+powerline-go: Beautiful and useful low-latency prompt for your shell
+pre-commit: Framework for managing multi-language pre-commit hooks
+restic: Fast, efficient and secure backup program
+smimesign: S/MIME signing utility for use with Git
+speedtest-cli: Command-line interface for https://speedtest.net bandwidth tests
+telnet: User interface to the TELNET protocol
+terraform: Tool to build, change, and version infrastructure
+tflint: Linter for Terraform files
+tldr: Simplified and community-driven man pages
+wget: Internet file retriever
+youtube-dl: Download YouTube videos from the command-line
