@@ -13,7 +13,7 @@ mv_files () {
    cat ~/.vimrc > ~/dot-files/.vimrc
    cat ~/Library/Preferences/com.googlecode.iterm2.plist > ~/dot-files/com.googlecode.iterm2.plist
    echo "Done!" ; echo "Exporting brew installations!"
-   brew leaves | xargs -n1 brew desc > ~/dot-files/Brew_install.list
+   brew leaves | sed 's/^/brew install /' > ~/dot-files/brew_install.sh
    echo "Done!"
 }
 
