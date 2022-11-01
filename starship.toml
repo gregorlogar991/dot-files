@@ -1,0 +1,154 @@
+#[](#3054fa)\
+format = """
+$status\
+$time\
+[](fg:#3C4251 bg:#3054fa)\
+$username\
+[](bg:#3C4251 fg:#3054fa)\
+$directory\
+[](fg:#3C4251 bg:#23262f)\
+$c\
+$elixir\
+$elm\
+$golang\
+$haskell\
+$java\
+$julia\
+$nodejs\
+$nim\
+$rust\
+$container\
+$terraform\
+$python\
+[](fg:#23262f bg:#7129ff)\
+$git_branch\
+$git_status\
+[ ](fg:#7129ff)\
+"""
+command_timeout = 5000
+# Disable the blank line at the start of the prompt
+add_newline = false
+
+[status]
+disabled = false
+success_symbol = " "
+format = "[$symbol]($style)"
+style = "bg:#3C4251"
+
+# You can also replace your username with a neat symbol like  to save some space
+[username]
+show_always = true
+style_user = "bg:#3054fa"
+style_root = "bg:#3054fa"
+format = '[$user]($style)'
+
+[directory]
+style = "bg:#3C4251"
+format = "[ $path ]($style)"
+truncation_length = 4
+truncation_symbol = "…"
+
+# Here is how you can shorten some long paths by text replacement
+# similar to mapped_locations in Oh My Posh:
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+# Keep in mind that the order matters. For example:
+# "Important Documents" = "  "
+# will not be replaced, because "Documents" was already substituted before.
+# So either put "Important Documents" before "Documents" or use the substituted version:
+# "Important  " = "  "
+
+[c]
+symbol = " "
+style = "bg:#23262f"
+format = '[ $symbol ($version) ]($style)'
+
+[elixir]
+symbol = " "
+style = "bg:#23262f"
+format = '[ $symbol ($version) ]($style)'
+
+[elm]
+symbol = " "
+style = "bg:#23262f"
+format = '[ $symbol ($version) ]($style)'
+
+[git_branch]
+symbol = ""
+#symbol = ""
+style = "bg:#7129ff"
+format = '[$symbol$branch ]($style)'
+
+
+[git_status]
+#conflicted = "⚔️ "
+#ahead = "🏎️ 💨 ×${count}"
+#behind = "🐢 ×${count}"
+#diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count}"
+#untracked = "🛤️  ×${count}"
+#stashed = "📦 "
+#modified = "📝 ×${count}"
+#staged = "🗃️  ×${count}"
+#renamed = "📛 ×${count}"
+#deleted = "🗑️  ×${count}"
+conflicted="="	
+ahead="${count}⇡"	
+behind="${count}⇣"	
+diverged="${count}⇕"	
+up_to_date=""
+untracked="${count}?"	
+stashed="$"
+modified="${count}!"	
+staged="${count}+"
+renamed= "${count}»"
+deleted=	"${count}✘"
+style = "bg:#7129ff"
+format = '[$all_status$ahead_behind ]($style)'
+
+[golang]
+symbol = " "
+style = "bg:#23262f"
+format = '[ $symbol ($version) ]($style)'
+
+[haskell]
+symbol = " "
+style = "bg:#23262f"
+format = '[ $symbol ($version) ]($style)'
+
+[java]
+symbol = " "
+style = "bg:#23262f"
+format = '[ $symbol ($version) ]($style)'
+
+[python]
+style = "bg:#23262f"
+format = '[ $symbol ($version) ]($style)'
+
+[julia]
+symbol = " "
+style = "bg:#23262f"
+format = '[ $symbol ($version) ]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#23262f"
+format = '[ $symbol ($version) ]($style)'
+
+[nim]
+symbol = " "
+style = "bg:#23262f"
+format = '[ $symbol ($version) ]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#23262f"
+format = '[ $symbol ($version) ]($style)'
+
+[time]
+disabled = false
+time_format = "%T" #
+style = "bg:#3C4251"
+format = '[ $time]($style)'

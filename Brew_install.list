@@ -26,6 +26,7 @@ pre-commit: Framework for managing multi-language pre-commit hooks
 restic: Fast, efficient and secure backup program
 smimesign: S/MIME signing utility for use with Git
 speedtest-cli: Command-line interface for https://speedtest.net bandwidth tests
+starship: Cross-shell prompt for astronauts
 telnet: User interface to the TELNET protocol
 terraform: Tool to build, change, and version infrastructure
 tflint: Linter for Terraform files

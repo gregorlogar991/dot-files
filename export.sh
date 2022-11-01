@@ -6,6 +6,7 @@ usage() { echo "Usage: $0 [git|export|all]" 1>&2; exit 1; }
 mv_files () {
    echo "Exporting profiles!"
    cat /etc/profile > ~/dot-files/profile
+   cat /etc/starship.toml > ~/dot-files/starship.toml
    cat ~/.bash_aliases > ~/dot-files/.bash_aliases
    cat ~/.bash_functions > ~/dot-files/.bash_functions
    cat ~/.bashrc > ~/dot-files/.bashrc
@@ -17,9 +18,9 @@ mv_files () {
 }
 
 push_to_git () {
-   cd /Users/gregalogar/p
+   cd ~/dot-files
    git add .
-   git commit -m "Update files - ${CUR_DATE}"
+   git commit -m "💻 Update files - ${CUR_DATE}"
    git push --force
 }
 

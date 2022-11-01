@@ -6,25 +6,17 @@ kn() {
     fi
 }
 
-
-
 knd() {
     kubectl config set-context --current --namespace=default
 }
-
-
 
 ku() {
     kubectl config unset current-context
 }
 
-
-
 ks() {
     aws eks --region eu-central-1 update-kubeconfig --name ct-cl
 }
-
-
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 export GROOVY_HOME=/opt/homebrew/opt/groovy/libexec
@@ -34,8 +26,7 @@ export PATH="/Users/gregalogar/.local/bin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
-
-
+eval "$(starship init bash)"
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/glogar1/.rd/bin:$PATH"
