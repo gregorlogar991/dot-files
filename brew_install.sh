@@ -22,6 +22,8 @@ brew install maven
 brew install minikube
 brew install moreutils
 brew install ncdu
+brew install neovim
+brew install node
 brew install openssl@3
 brew install pass-otp
 brew install pre-commit
@@ -34,4 +36,5 @@ brew install terraform
 brew install tflint
 brew install tldr
 brew install wget
+brew install yarn
 brew install youtube-dl

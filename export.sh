@@ -11,6 +11,7 @@ mv_files () {
    cat ~/.bash_functions > ~/dot-files/.bash_functions
    cat ~/.bashrc > ~/dot-files/.bashrc
    cat ~/.vimrc > ~/dot-files/.vimrc
+   cat ~/.config/nvim/init.vim > ~/dot-files/init.vim
    cat ~/Library/Preferences/com.googlecode.iterm2.plist > ~/dot-files/com.googlecode.iterm2.plist
    echo "Done!" ; echo "Exporting brew installations!"
    brew leaves | sed 's/^/brew install /' > ~/dot-files/brew_install.sh

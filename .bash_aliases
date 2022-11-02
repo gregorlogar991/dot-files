@@ -38,6 +38,7 @@ alias kcntx="kubectl config current-context"
 alias python="python3"
 alias tf="terraform"
 alias pwsh="/usr/local/microsoft/powershell/7/pwsh ; exit;"
+alias vim="nvim"
 
 #AWS
 alias awsExport='env | grep -i aws | sed "s/^/export /"'
