@@ -1,4 +1,3 @@
-brew install autojump
 brew install awscli
 brew install azure-cli
 brew install bash-completion@2
@@ -25,7 +24,6 @@ brew install moreutils
 brew install ncdu
 brew install openssl@3
 brew install pass-otp
-brew install powerline-go
 brew install pre-commit
 brew install restic
 brew install smimesign

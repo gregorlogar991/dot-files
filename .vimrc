@@ -1,6 +1,8 @@
 syntax on
 set number
-set autoindent
+set expandtab
+set tabstop=3
+set shiftwidth=3
 set noshowmode
 set laststatus=2
 if !has('gui_running')
