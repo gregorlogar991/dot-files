@@ -54,4 +54,10 @@ let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#right_sep = ''
+
+
+
 inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
