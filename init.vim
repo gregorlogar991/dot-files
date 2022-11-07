@@ -30,7 +30,8 @@ set encoding=UTF-8
 nnoremap <C-f> :NERDTreeFocus<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-l> :set invnumber<CR>
-
+inoremap <C-š> <Esc>viwUi
+inoremap <C-š> viwU<Esc>
 nmap <F8> :TagbarToggle<CR>
 
 :set completeopt-=preview " For No Previews
