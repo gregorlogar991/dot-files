@@ -22,3 +22,5 @@ export HISTSIZE=${HISTFILESIZE}  # increase history size (default is 500)
 # ensure synchronization between bash memory and history file
 #export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"
 #unset PROMPT_COMMAND
+source <(kubectl completion bash)
+complete -o default -F __start_kubectl k

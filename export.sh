@@ -13,8 +13,9 @@ mv_files () {
    cat ~/.vimrc > ~/dot-files/.vimrc
    cat ~/.config/nvim/init.vim > ~/dot-files/init.vim
    cat ~/Library/Preferences/com.googlecode.iterm2.plist > ~/dot-files/com.googlecode.iterm2.plist
-   echo "Done!" ; echo "Exporting brew installations!"
-   brew leaves | sed 's/^/brew install /' > ~/dot-files/brew_install.sh
+   echo "Done!" ; echo "Brew bundle dump!"
+   rm Brewfile
+   brew bundle dump
    echo "Done!"
 }
 
