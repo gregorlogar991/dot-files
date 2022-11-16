@@ -12,7 +12,6 @@ mv_files () {
    cat ~/.bashrc > ~/dot-files/.bashrc
    cat ~/.vimrc > ~/dot-files/.vimrc
    cat ~/.config/nvim/init.vim > ~/dot-files/init.vim
-   cat ~/Library/Preferences/com.googlecode.iterm2.plist > ~/dot-files/com.googlecode.iterm2.plist
    echo "Done!" ; echo "Brew bundle dump!"
    rm Brewfile
    brew bundle dump
