@@ -85,6 +85,7 @@ cask "evernote"
 cask "firefox"
 cask "font-ubuntu-nerd-font"
 cask "intellij-idea-ce"
+cask "viber"
 cask "visual-studio-code"
 cask "vlc"
 mas "AdBlock", id: 1402042596
