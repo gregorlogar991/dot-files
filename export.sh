@@ -21,6 +21,7 @@ mv_files () {
 push_to_git () {
    cd ~/dot-files
    git add .
+   git status
    git commit -m "💻 Update files - ${CUR_DATE}"
    git push --force
 }
