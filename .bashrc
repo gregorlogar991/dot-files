@@ -6,7 +6,7 @@ export PATH="/Users/gregalogar/.local/bin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
-export PATH="/Users/glogar/.rd/bin:$PATH"
+#export PATH="/Users/glogar/.rd/bin:$PATH"
 [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 source ~/.iterm2_shell_integration.bash
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
