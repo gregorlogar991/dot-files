@@ -100,6 +100,7 @@ cask "viber"
 cask "visual-studio-code"
 cask "vlc"
 mas "AdBlock", id: 1402042596
+mas "AdBlock Pro", id: 1018301773
 mas "Amphetamine", id: 937984704
 mas "Grammarly for Safari", id: 1462114288
 mas "Messenger", id: 1480068668
