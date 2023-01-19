@@ -8,6 +8,7 @@ tap "homebrew/core"
 tap "kreuzwerker/taps"
 tap "minamijoyo/hcledit"
 brew "ansible"
+brew "ansible-lint"
 brew "jpeg-xl"
 brew "aom"
 brew "awscli"
@@ -57,6 +58,7 @@ brew "minikube"
 brew "moreutils"
 brew "ncdu"
 brew "neovim"
+brew "octant"
 brew "openssl@3"
 brew "tree"
 brew "pass"
@@ -94,6 +96,7 @@ cask "intellij-idea-ce"
 cask "microsoft-teams"
 cask "nvidia-geforce-now"
 cask "obsidian"
+cask "openvpn-connect"
 cask "raycast"
 cask "shottr"
 cask "viber"
@@ -102,6 +105,7 @@ cask "vlc"
 mas "AdBlock", id: 1402042596
 mas "AdBlock Pro", id: 1018301773
 mas "Amphetamine", id: 937984704
+mas "Gestimer", id: 990588172
 mas "Grammarly for Safari", id: 1462114288
 mas "Messenger", id: 1480068668
 mas "Microsoft Excel", id: 462058435

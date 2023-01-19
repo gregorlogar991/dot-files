@@ -45,7 +45,7 @@ format = '[$user]($style)'
 [directory]
 style = "bg:#3C4251"
 format = "[ $path ]($style)"
-truncation_length = 4
+truncation_length = 2
 truncation_symbol = "…"
 
 # Here is how you can shorten some long paths by text replacement
