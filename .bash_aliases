@@ -5,7 +5,8 @@ alias h="history | grep "
 # Search running processes
 alias p="ps aux | grep "
 
-alias weather='wttr.in/Ljubljana'
+alias weatherLj='curl wttr.in/Ljubljana'
+alias weatherRib='curl wttr.in/Ribnica'
 
 #GIT
 alias g="git"
