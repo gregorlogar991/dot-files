@@ -74,6 +74,7 @@ brew "pinentry-mac"
 brew "powerline-go"
 brew "pre-commit"
 brew "python-tk@3.10"
+brew "python-tk@3.11"
 brew "python@3.9"
 brew "rclone"
 brew "restic"
@@ -98,6 +99,7 @@ brew "minamijoyo/hcledit/hcledit"
 cask "brave-browser"
 cask "evernote"
 cask "firefox"
+cask "font-jetbrains-mono"
 cask "font-ubuntu-nerd-font"
 cask "intellij-idea-ce"
 cask "microsoft-teams"
@@ -113,6 +115,7 @@ cask "vlc"
 mas "AdBlock", id: 1402042596
 mas "AdBlock Pro", id: 1018301773
 mas "Amphetamine", id: 937984704
+mas "Be Focused", id: 973134470
 mas "Gestimer", id: 990588172
 mas "Grammarly for Safari", id: 1462114288
 mas "Messenger", id: 1480068668

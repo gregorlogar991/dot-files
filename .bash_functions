@@ -33,29 +33,12 @@ ks() {
 
 ### AWS
 
-ct-aws-admin() {
+ct-aws-devops-admin() {
     export $(printf "AWS_ACCESS_KEY_ID=%s AWS_SECRET_ACCESS_KEY=%s AWS_SESSION_TOKEN=%s" \
     $(aws sts assume-role \
-    --role-arn arn:aws:iam::XXXXXXXXXXXXXX:role/OrganizationAccountAccessRole \
+    --role-arn arn:aws:iam::XXXXXXXXXXXXX:role/OrganizationAccountAccessRole \
     --role-session-name glogar-admin-devops \
     --query "Credentials.[AccessKeyId,SecretAccessKey,SessionToken]" \
     --output text))
 }
 
-ct-aws-devops() {
-    export $(printf "AWS_ACCESS_KEY_ID=%s AWS_SECRET_ACCESS_KEY=%s AWS_SESSION_TOKEN=%s" \
-    $(aws sts assume-role \
-    --role-arn arn:aws:iam::XXXXXXXXXXXXXX:role/devops \
-    --role-session-name glogar-devops-devops \
-    --query "Credentials.[AccessKeyId,SecretAccessKey,SessionToken]" \
-    --output text))
-}
-
-ct-aws-reader() {
-    export $(printf "AWS_ACCESS_KEY_ID=%s AWS_SECRET_ACCESS_KEY=%s AWS_SESSION_TOKEN=%s" \
-    $(aws sts assume-role \
-    --role-arn arn:aws:iam::XXXXXXXXXXXXXX:role/reader \
-    --role-session-name glogar-reader-devops \
-    --query "Credentials.[AccessKeyId,SecretAccessKey,SessionToken]" \
-    --output text))
-}
