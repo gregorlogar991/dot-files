@@ -122,7 +122,6 @@ mas "AdBlock", id: 1402042596
 mas "AdBlock Pro", id: 1018301773
 mas "Amphetamine", id: 937984704
 mas "Gestimer", id: 990588172
-mas "Grammarly for Safari", id: 1462114288
 mas "Messenger", id: 1480068668
 mas "Microsoft Excel", id: 462058435
 mas "Microsoft OneNote", id: 784801555
