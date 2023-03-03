@@ -36,11 +36,13 @@ alias mkdir="mkdir -p"
 #Tools
 alias k="kubectl"
 alias kcntx="kubectl config current-context"
-alias python="python3"
+#alias python="/opt/homebrew/bin/python3"
+#alias python3="/opt/homebrew/bin/python3"
 alias tf="terraform"
 alias pwsh="/usr/local/microsoft/powershell/7/pwsh ; exit;"
 alias vim="nvim"
 alias ap="ansible-playbook"
+alias brew='env PATH="${PATH//$(pyenv root)\/shims:/}" brew'
 
 #AWS
 alias awsExport='env | grep -i aws | sed "s/^/export /"'

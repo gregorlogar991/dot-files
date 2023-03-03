@@ -7,6 +7,9 @@ tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "kreuzwerker/taps"
 tap "minamijoyo/hcledit"
+brew "readline"
+brew "sqlite"
+brew "xz"
 brew "ansible"
 brew "yamllint"
 brew "ansible-lint"
@@ -72,7 +75,9 @@ brew "pass"
 brew "pass-otp"
 brew "pinentry-mac"
 brew "powerline-go"
-brew "pre-commit"
+brew "pre-commit", link: false
+brew "pyenv"
+brew "tcl-tk"
 brew "python-tk@3.10"
 brew "python-tk@3.11"
 brew "python@3.9"
@@ -93,6 +98,7 @@ brew "tldr"
 brew "wget"
 brew "yarn"
 brew "yq"
+brew "zlib"
 brew "derailed/k9s/k9s"
 brew "kreuzwerker/taps/m1-terraform-provider-helper"
 brew "minamijoyo/hcledit/hcledit"
@@ -115,7 +121,6 @@ cask "vlc"
 mas "AdBlock", id: 1402042596
 mas "AdBlock Pro", id: 1018301773
 mas "Amphetamine", id: 937984704
-mas "Be Focused", id: 973134470
 mas "Gestimer", id: 990588172
 mas "Grammarly for Safari", id: 1462114288
 mas "Messenger", id: 1480068668
@@ -124,4 +129,5 @@ mas "Microsoft OneNote", id: 784801555
 mas "Microsoft Outlook", id: 985367838
 mas "Microsoft PowerPoint", id: 462062816
 mas "Microsoft Word", id: 462054704
+mas "OneDrive", id: 823766827
 mas "Slack", id: 803453959

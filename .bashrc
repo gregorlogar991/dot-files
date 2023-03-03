@@ -25,3 +25,6 @@ export HISTSIZE=${HISTFILESIZE}  # increase history size (default is 500)
 #unset PROMPT_COMMAND
 source <(kubectl completion bash)
 complete -o default -F __start_kubectl k
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
