@@ -30,7 +30,7 @@ sudo pmset -a displaysleep 5
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
-# Save screenshots to the desktop
+# Save screenshots to custom location
 mkdir "${HOME}/Pictures/Screenshots"
 defaults write com.apple.screencapture location -string "${HOME}/Pictures/Screenshots"
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
