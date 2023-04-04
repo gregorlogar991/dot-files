@@ -119,7 +119,6 @@ cask "shottr"
 cask "vagrant"
 cask "viber"
 cask "visual-studio-code"
-cask "vlc"
 mas "AdBlock", id: 1402042596
 mas "AdBlock Pro", id: 1018301773
 mas "Amphetamine", id: 937984704
