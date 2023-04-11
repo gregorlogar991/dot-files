@@ -1,3 +1,21 @@
+#Similar use as Amphetamine, but from terminal and buildin
+function coffee() {
+    if [[ ! -v COFFEE_PID ]]; then
+        caffeinate -d &
+        export COFFEE_PID=$!
+        echo "Running 'caffeinate' in the background."
+        echo "PID: ${COFFEE_PID}"
+    else
+    if [[ $(ps aux | grep "$COFFEE_PID" | grep "caffeinate" | wc -l) -gt 0 ]]; then
+        echo "Killing 'caffeinate' process with PID ${COFFEE_PID}"
+        kill "${COFFEE_PID}"
+        unset COFFEE_PID
+        else
+            echo "This process ID is not from caffeinate! Please kill the process manually!"
+        fi
+    fi
+}
+
 # Create a new directory and enter it
 function mkd() {
 	mkdir -p "$@" && cd "$_";
