@@ -14,7 +14,7 @@ mv_files () {
    sed -i -E 's/iam::[0-9]+:role/iam::XXXXXXXXXXXX:role/' ~/dot-files/.bash_functions
    cp ~/.bashrc ~/dot-files/.bashrc
    cp ~/.vimrc ~/dot-files/.vimrc
-   cp ~/.config/nvim/init.vim ~/dot-files/init.vim
+   cp ~/.config/nvim/init.vim ~/dot-files/.config/nvim/init.vim
    echo "Done!" ; echo "Brew bundle dump!"
    rm Brewfile
    brew bundle dump

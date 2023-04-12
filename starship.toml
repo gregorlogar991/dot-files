@@ -1,6 +1,5 @@
 #[](#3054fa)\
 format = """
-$status\
 $time\
 [](fg:#3C4251 bg:#3054fa)\
 $username\
