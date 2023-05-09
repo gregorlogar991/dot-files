@@ -96,3 +96,4 @@ ct-aws-reader() {
     --query "Credentials.[AccessKeyId,SecretAccessKey,SessionToken]" \
     --output text))
 }
+
