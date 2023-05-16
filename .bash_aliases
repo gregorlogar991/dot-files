@@ -19,6 +19,7 @@ alias sysinfo="neofetch | lolcat"
 alias df="df -h"
 alias procs='ps -eo pid,user,stime,etime,cmd'
 alias ports='netstat -anp | grep -i listen'
+alias hh="hstr"
 
 #Files
 alias ll='exa --icons --group-directories-first -l --git -g --time modified --sort newest'
