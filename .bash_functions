@@ -8,6 +8,7 @@ function write_line() {
     for i in $(seq $LINES); do echo -n "-"; done
 }
 
+
 function coffee() {
     if [[ ! -v COFFEE_PID ]]; then
         caffeinate -d &
@@ -33,8 +34,9 @@ function mkd() {
 #GIT
 gadd() {
 	git status
-    
+    write_line 30
     git add --all
+    write_line 30
 	git commit -m "$1"
 }
 
