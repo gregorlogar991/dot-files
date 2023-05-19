@@ -6,6 +6,7 @@ function write_line() {
         LINES=${1}
     fi
     for i in $(seq $LINES); do echo -n "-"; done
+    echo ""
 }
 
 
@@ -35,7 +36,7 @@ function mkd() {
 gadd() {
 	git status
     write_line 30
-    git add --all
+    git add --all --verbose
     write_line 30
 	git commit -m "$1"
 }
