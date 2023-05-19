@@ -1,4 +1,13 @@
 #Similar use as Amphetamine, but from terminal and buildin
+
+function write_line() {
+    LINES=10
+    if [[ ${1} =~ ^[0-9]+$ ]]; then
+        LINES=${1}
+    fi
+    for i in $(seq $LINES); do echo -n "-"; done
+}
+
 function coffee() {
     if [[ ! -v COFFEE_PID ]]; then
         caffeinate -d &
@@ -23,9 +32,10 @@ function mkd() {
 
 #GIT
 gadd() {
-	git add --all
-	git commit -m "$1"
 	git status
+    
+    git add --all
+	git commit -m "$1"
 }
 
 #K8s
