@@ -35,9 +35,9 @@ function mkd() {
 #GIT
 gadd() {
 	git status
-    write_line 30
+    write_line 50
     git add --all --verbose
-    write_line 30
+    write_line 50
 	git commit -m "$1"
 }
 
