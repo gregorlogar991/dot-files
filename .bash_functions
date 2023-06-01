@@ -9,10 +9,8 @@ function write_line() {
     echo ""
 }
 
-
 function coffee() {
     if [[ ! -v COFFEE_PID ]]; then
-        caffeinate -d &
         export COFFEE_PID=$!
         echo "Running 'caffeinate' in the background."
         echo "PID: ${COFFEE_PID}"
