@@ -1,4 +1,4 @@
-#Similar use as Amphetamine, but from terminal and buildin
+# Similar use as Amphetamine, but from terminal and buildin
 
 function write_line() {
     LINES=10
