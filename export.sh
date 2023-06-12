@@ -10,7 +10,6 @@ mv_files () {
    cp /etc/starship.toml ~/dot-files/starship.toml
    cp ~/.bash_aliases ~/dot-files/.bash_aliases
    cp ~/.bash_functions ~/dot-files/.bash_functions
-   cp -r ~/.warp/ ~/dot-files/.warp/
    sed -i -E 's/iam::[0-9]+:role/iam::XXXXXXXXXXXX:role/' ~/dot-files/.bash_functions
    cp ~/.bashrc ~/dot-files/.bashrc
    cp ~/.vimrc ~/dot-files/.vimrc
