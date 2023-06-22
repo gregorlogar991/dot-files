@@ -94,10 +94,10 @@ brew "smimesign"
 brew "speedtest-cli"
 brew "starship"
 brew "telnet"
-brew "terraform"
+brew "terraform", link: false
 brew "terraform-docs"
 brew "terrascan"
-brew "tfenv", link: false
+brew "tfenv"
 brew "tflint"
 brew "tfsec"
 brew "tfupdate"

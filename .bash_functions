@@ -1,5 +1,3 @@
-#Similar use as Amphetamine, but from terminal and buildin
-
 function write_line() {
     LINES=10
     if [[ ${1} =~ ^[0-9]+$ ]]; then
@@ -38,6 +36,13 @@ gadd() {
     write_line 50
 	git commit -m "$1"
 }
+
+#### DOCKER ####
+
+ctop() {
+    docker run --rm -ti --name=ctop --volume /var/run/docker.sock:/var/run/docker.sock:ro quay.io/vektorlab/ctop:latest
+}
+
 
 #K8s
 kn() {
