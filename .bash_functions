@@ -43,6 +43,9 @@ ctop() {
     docker run --rm -ti --name=ctop --volume /var/run/docker.sock:/var/run/docker.sock:ro quay.io/vektorlab/ctop:latest
 }
 
+wuzz() {
+    docker run --rm -it --name wuzz gregorlogar991/wuzz:v0.5.0
+}
 
 #K8s
 kn() {
