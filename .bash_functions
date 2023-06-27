@@ -47,6 +47,10 @@ wuzz() {
     docker run --rm -it --name wuzz gregorlogar991/wuzz:v0.5.0
 }
 
+naabu() {
+    docker run projectdiscovery/naabu $@
+}
+
 #K8s
 kn() {
     if [ "$1" != "" ]; then
