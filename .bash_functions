@@ -48,7 +48,7 @@ wuzz() {
 }
 
 naabu() {
-    docker run projectdiscovery/naabu $@
+    docker run --rm projectdiscovery/naabu $@
 }
 
 #K8s
