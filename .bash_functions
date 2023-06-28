@@ -40,7 +40,7 @@ gadd() {
 #### DOCKER ####
 
 toolbox() {
-    docker run --rm -it --platform linux/arm64 ${@} ghcr.io/gregorlogar991/toolbox:latest /bin/bash
+    docker run --rm -it --hostname toolbox --platform linux/arm64 ${@} ghcr.io/gregorlogar991/toolbox:latest /bin/bash
 }
 
 ctop() {
