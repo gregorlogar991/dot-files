@@ -28,7 +28,7 @@ function mkd() {
 	mkdir -p "$@" && cd "$_";
 }
 
-#GIT
+#### GIT ####
 gadd() {
 	git status
     write_line 50
@@ -38,6 +38,10 @@ gadd() {
 }
 
 #### DOCKER ####
+
+toolbox() {
+    docker run --rm -it --platform linux/arm64 ${@} ghcr.io/gregorlogar991/toolbox:latest /bin/bash
+}
 
 ctop() {
     docker run --rm -ti --name=ctop --volume /var/run/docker.sock:/var/run/docker.sock:ro quay.io/vektorlab/ctop:latest
@@ -51,7 +55,7 @@ naabu() {
     docker run --rm projectdiscovery/naabu $@
 }
 
-#K8s
+#### K8s ####
 kn() {
     if [ "$1" != "" ]; then
         kubectl config set-context --current --namespace=$1
@@ -72,7 +76,7 @@ ks() {
     aws eks --region eu-central-1 update-kubeconfig --name ct-cl
 }
 
-### AWS
+#### AWS #####
 
 ct-aws-devops-admin() {
     export $(printf "AWS_ACCESS_KEY_ID=%s AWS_SECRET_ACCESS_KEY=%s AWS_SESSION_TOKEN=%s" \
