@@ -55,6 +55,10 @@ naabu() {
     docker run --rm projectdiscovery/naabu $@
 }
 
+jenkins-local() {
+    docker run --name local-jenkins --rm  -d -p 50000:50000 -p 8080:8080 -v /Users/glogar/local-jenkins:/var/jenkins_home jenkins/jenkins
+}
+
 #### K8s ####
 kn() {
     if [ "$1" != "" ]; then
