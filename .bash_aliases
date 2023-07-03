@@ -45,7 +45,6 @@ alias ka="kubectl apply -f"
 
 alias kcntx="kubectl config current-context"
 alias tf="terraform"
-alias pwsh="/usr/local/microsoft/powershell/7/pwsh ; exit;"
 alias ap="ansible-playbook"
 alias brew='env PATH="${PATH//$(pyenv root)\/shims:/}" brew'
 
