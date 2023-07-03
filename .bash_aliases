@@ -37,6 +37,12 @@ alias mkdir="mkdir -p"
 #Tools
 alias vim="hx"
 alias k="kubectl"
+alias kr="kubectl run"
+alias ke="kubectl edit"
+alias kd="kubectl describe"
+alias kg="kubectl get"
+alias ka="kubectl apply -f"
+
 alias kcntx="kubectl config current-context"
 alias tf="terraform"
 alias pwsh="/usr/local/microsoft/powershell/7/pwsh ; exit;"

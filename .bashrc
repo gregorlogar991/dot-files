@@ -39,5 +39,8 @@ if [ -e $HOME/.bash_functions ]; then
     source $HOME/.bash_functions
 fi
 
+export dr="--dry-run=client -oyaml"
+
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/bashrc.post.bash" ]] && builtin source "$HOME/.fig/shell/bashrc.post.bash"
+
