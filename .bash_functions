@@ -40,23 +40,19 @@ gadd() {
 #### DOCKER ####
 
 toolbox() {
-    docker run --rm -it --hostname toolbox --platform linux/arm64 ${@} ghcr.io/gregorlogar991/toolbox:latest /bin/bash
-}
-
-ctop() {
-    docker run --rm -ti --name=ctop --volume /var/run/docker.sock:/var/run/docker.sock:ro quay.io/vektorlab/ctop:latest
+    podman run --rm -it --hostname toolbox --platform linux/arm64 ${@} ghcr.io/gregorlogar991/toolbox:latest /bin/bash
 }
 
 wuzz() {
-    docker run --rm -it --name wuzz gregorlogar991/wuzz:v0.5.0
+    podman run --rm -it --name wuzz gregorlogar991/wuzz:v0.5.0
 }
 
 naabu() {
-    docker run --rm projectdiscovery/naabu $@
+    podman run --rm projectdiscovery/naabu $@
 }
 
 jenkins-local() {
-    docker run --name local-jenkins --rm  -d -p 50000:50000 -p 8080:8080 -v /Users/glogar/local-jenkins:/var/jenkins_home jenkins/jenkins
+    podman run --name local-jenkins --rm  -d -p 50000:50000 -p 8080:8080 -v /Users/glogar/local-jenkins:/var/jenkins_home jenkins/jenkins
 }
 
 #### K8s ####
@@ -65,6 +61,27 @@ kn() {
         kubectl config set-context --current --namespace=$1
     else
         echo -e "\e[1;31m Error, please provide a valid Namespace\e[0m"
+    fi
+}
+
+podman-buildx() {
+    usage() {
+        echo "Usage: podman-buildx <image-name> <image-version>"
+    }
+
+    if [[ "$1" == "" || "$2" == "" ]]; then
+        usage
+    else  
+        IMAGE_NAME=$1
+        VERSION=$2
+
+        podman manifest create $1
+        write_line 50
+        podman build --tag "${1}:${2}" --manifest ${1} --arch amd64 .
+        write_line 50
+        podman build --tag "${1}:${2}" --manifest ${1} --arch arm64 .
+        write_line 50
+        podman manifest push --all ${1} "docker://${1}:${2}"
     fi
 }
 
