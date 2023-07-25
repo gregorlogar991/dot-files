@@ -34,7 +34,7 @@ gadd() {
     write_line 50
     git add --all --verbose
     write_line 50
-	git commit -m "$1"
+	git commit -S -m "$1"
 }
 
 #### DOCKER ####
