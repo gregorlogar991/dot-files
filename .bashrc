@@ -15,7 +15,7 @@ export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 source ~/.iterm2_shell_integration.bash
 
 # HSTR configuration - add this to ~/.bashrc
-export HSTR_CONFIG=hicolor       # get more colors
+export HSTR_CONFIG=hicolor,raw-history-view       # get more colors
 export HISTCONTROL=ignorespace   # leading space hides commands from history
 export HISTFILESIZE=8000        # increase history file size (default is 500)
 export HISTSIZE=${HISTFILESIZE}  # increase history size (default is 500)
