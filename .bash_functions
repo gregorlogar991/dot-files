@@ -47,9 +47,9 @@ wuzz() {
     podman run --rm -it --name wuzz gregorlogar991/wuzz:v0.5.0
 }
 
-naabu() {
-    podman run --rm projectdiscovery/naabu $@
-}
+#naabu() {
+#    podman run --rm projectdiscovery/naabu $@
+#}
 
 jenkins-local() {
     podman run --name local-jenkins --rm  -d -p 50000:50000 -p 8080:8080 -v /Users/glogar/local-jenkins:/var/jenkins_home jenkins/jenkins
