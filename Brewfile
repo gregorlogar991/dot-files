@@ -3,7 +3,6 @@ tap "buo/cask-upgrade"
 tap "derailed/k9s"
 tap "homebrew/autoupdate"
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/services"
 tap "kreuzwerker/taps"
@@ -138,6 +137,7 @@ mas "Microsoft Outlook", id: 985367838
 mas "Microsoft PowerPoint", id: 462062816
 mas "Microsoft Word", id: 462054704
 mas "OneDrive", id: 823766827
+mas "QuickShade", id: 931571202
 mas "Slack", id: 803453959
 vscode "aaron-bond.better-comments"
 vscode "alefragnani.Bookmarks"
