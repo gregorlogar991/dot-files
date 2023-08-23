@@ -19,10 +19,12 @@ $rust\
 $container\
 $terraform\
 $python\
-[](fg:#23262f bg:#7129ff)\
+[](fg:#23262f bg:#3C4251)\
+$kubernetes\
+[](bg:#7129ff fg:#3C4251)\
 $git_branch\
 $git_status\
-[ ](fg:#7129ff)\
+[\n$character](fg:#7129ff)\
 """
 command_timeout = 5000
 # Disable the blank line at the start of the prompt
@@ -40,6 +42,8 @@ show_always = true
 style_user = "bg:#3054fa"
 style_root = "bg:#3054fa"
 format = '[$user]($style)'
+
+
 
 [directory]
 style = "bg:#3C4251"
@@ -107,27 +111,38 @@ format = '[$all_status$ahead_behind ]($style)'
 
 [golang]
 style = "bg:#23262f"
-format = '[ $symbol ($version)]($style)'
+format = '[ $symbol ($version) ]($style)'
 
 [java]
 symbol = "☕"
 style = "bg:#23262f"
-format = '[ $symbol ($version)]($style)'
+format = '[ $symbol ($version) ]($style)'
 
 [python]
 style = "bg:#23262f"
-format = '[ $symbol ($version)]($style)'
+format = '[ $symbol ($version) ]($style)'
 
 [nodejs]
 style = "bg:#23262f"
-format = '[ $symbol ($version)]($style)'
+format = '[ $symbol ($version) ]($style)'
 
 [nim]
 style = "bg:#23262f"
-format = '[ $symbol ($version)]($style)'
+format = '[ $symbol ($version) ]($style)'
 
 [time]
 disabled = false
 time_format = "%T" #
 style = "bg:#3C4251"
 format = '[ $time]($style)'
+
+[kubernetes]
+disabled = false
+style = "bg:#3C4251"
+format = '[ $symbol$context( \($namespace\)) ]($style)'
+detect_files = ['.k8s']
+
+[kubernetes.context_aliases]
+#'dev.local.cluster.k8s' = 'dev'
+#'.*/openshift-cluster/.*' = 'openshift'
+'kind.*' = 'local'
