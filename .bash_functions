@@ -120,6 +120,14 @@ ct-aws-sandbox-admin() {
 
 ####  ####
 
+urlencode() {
+    python3 -c "from pwn import *; print(urlencode('$1'));"
+}
+
+urldecode() {
+    python3 -c "from pwn import *; print(urldecode('$1'));"
+}
+
 function extract {
   if [ -z "$1" ]; then
     echo "Usage: extract <path/file_name>.<zip|rar|bz2|gz|tar|tbz2|tgz|Z|7z|xz|ex|tar.bz2|tar.gz|tar.xz>"
