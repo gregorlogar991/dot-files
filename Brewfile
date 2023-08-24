@@ -26,6 +26,7 @@ brew "gnutls"
 brew "emacs"
 brew "cask"
 brew "checkov"
+brew "cmake"
 brew "dive"
 brew "docker"
 brew "duf"
@@ -142,6 +143,7 @@ mas "Microsoft Word", id: 462054704
 mas "OneDrive", id: 823766827
 mas "QuickShade", id: 931571202
 mas "Slack", id: 803453959
+mas "Wappalyzer", id: 1520333300
 vscode "aaron-bond.better-comments"
 vscode "alefragnani.Bookmarks"
 vscode "amazonwebservices.aws-toolkit-vscode"
