@@ -121,6 +121,7 @@ cask "betaflight-configurator"
 cask "brave-browser"
 cask "burp-suite"
 cask "dbeaver-community"
+cask "discord"
 cask "evernote"
 cask "fig"
 cask "firefox"
@@ -141,6 +142,18 @@ cask "steam"
 cask "vagrant"
 cask "viber"
 cask "visual-studio-code"
+mas "AdBlock", id: 1402042596
+mas "AdBlock Pro", id: 1018301773
+mas "Gestimer", id: 990588172
+mas "Messenger", id: 1480068668
+mas "Microsoft Excel", id: 462058435
+mas "Microsoft OneNote", id: 784801555
+mas "Microsoft Outlook", id: 985367838
+mas "Microsoft PowerPoint", id: 462062816
+mas "Microsoft Word", id: 462054704
+mas "OneDrive", id: 823766827
+mas "Slack", id: 803453959
+mas "Wappalyzer", id: 1520333300
 vscode "aaron-bond.better-comments"
 vscode "alefragnani.Bookmarks"
 vscode "amazonwebservices.aws-toolkit-vscode"
