@@ -14,6 +14,7 @@ mv_files () {
    cp ~/.bashrc ~/dot-files/.bashrc
    cp ~/.vimrc ~/dot-files/.vimrc
    cp ~/.config/nvim/init.vim ~/dot-files/.config/nvim/init.vim
+   cp ~/.tmux.conf ~/dot-files/.tmux.conf
    echo "Done!" ; echo "Brew bundle dump!"
    rm Brewfile
    brew bundle dump
