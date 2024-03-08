@@ -1,0 +1,118 @@
+function write_line() {
+    LINES=10
+    if [[ ${1} =~ ^[0-9]+$ ]]; then
+        LINES=${1}
+    fi
+    for i in $(seq $LINES); do echo -n "-"; done
+    echo ""
+}
+
+function coffee() {
+    if [[ ! -v COFFEE_PID ]]; then
+        export COFFEE_PID=$!
+        echo "Running 'caffeinate' in the background."
+        echo "PID: ${COFFEE_PID}"
+    else
+    if [[ $(ps aux | grep "$COFFEE_PID" | grep "caffeinate" | wc -l) -gt 0 ]]; then
+        echo "Killing 'caffeinate' process with PID ${COFFEE_PID}"
+        kill "${COFFEE_PID}"
+        unset COFFEE_PID
+        else
+            echo "This process ID is not from caffeinate! Please kill the process manually!"
+        fi
+    fi
+}
+
+# Create a new directory and enter it
+function mkd() {
+	mkdir -p "$@" && cd "$_";
+}
+
+#### GIT ####
+gadd() {
+	git status
+    write_line 50
+    git add --all --verbose
+    write_line 50
+	git commit -m "$1"
+}
+
+#### DOCKER ####
+
+kafka-ui() {
+    docker run -it -p 8080:8080 --name kafkaui --rm -d -e DYNAMIC_CONFIG_ENABLED=true -v ~/kafka/clusters.yaml:/etc/kafkaui/dynamic_config.yaml docker.io/provectuslabs/kafka-ui:latest
+}
+
+colima_restart() {
+    colima stop
+    colima delete
+    colima start --arch aarch64 --vm-type=vz --vz-rosetta --memory 8
+}
+
+wuzz() {
+    docker run --rm -it --name wuzz gregorlogar991/wuzz:v0.5.0
+}
+
+naabu() {
+   docker run --rm projectdiscovery/naabu $@
+}
+
+jenkins-local() {
+    docker run --name local-jenkins --rm  -d -p 50000:50000 -p 8080:8080 -v /Users/glogar/local-jenkins:/var/jenkins_home jenkins/jenkins
+}
+
+#### K8s ####
+kn() {
+    if [ "$1" != "" ]; then
+        kubectl config set-context --current --namespace=$1
+    else
+        echo -e "\e[1;31m Error, please provide a valid Namespace\e[0m"
+    fi
+}
+
+knd() {
+    kubectl config set-context --current --namespace=default
+}
+
+####  ####
+
+urlencode() {
+    python3 -c "from pwn import *; print(urlencode('$1'));"
+}
+
+urldecode() {
+    python3 -c "from pwn import *; print(urldecode('$1'));"
+}
+
+function extract {
+  if [ -z "$1" ]; then
+    echo "Usage: extract <path/file_name>.<zip|rar|bz2|gz|tar|tbz2|tgz|Z|7z|xz|ex|tar.bz2|tar.gz|tar.xz>"
+  else
+    if [ -f $1 ]; then
+      case $1 in
+        *.tar.bz2)   tar xvjf $1    ;;
+        *.tar.gz)    tar xvzf $1    ;;
+        *.tar.xz)    tar xvJf $1    ;;
+        *.lzma)      unlzma $1      ;;
+        *.bz2)       bunzip2 $1     ;;
+        *.rar)       unrar x -ad $1 ;;
+        *.gz)        gunzip $1      ;;
+        *.tar)       tar xvf $1     ;;
+        *.tbz2)      tar xvjf $1    ;;
+        *.tgz)       tar xvzf $1    ;;
+        *.zip)       unzip $1       ;;
+        *.Z)         uncompress $1  ;;
+        *.7z)        7z x $1        ;;
+        *.xz)        unxz $1        ;;
+        *.exe)       cabextract $1  ;;
+        *)           echo "extract: '$1' - unknown archive method" ;;
+      esac
+    else
+      echo "$1 - file does not exist"
+    fi
+  fi
+}
+
+function host2() {
+  dig $1 @10.0.0.2
+}

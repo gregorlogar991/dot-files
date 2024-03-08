@@ -7,10 +7,14 @@ mv_files () {
    echo "Exporting profiles!"
 
    cp -r ~/.config/helix ~/dot-files/.config/
+
    cp ~/.aliases ~/dot-files/.aliases
    cp ~/.functions ~/dot-files/.functions
    sed -i -E 's/iam::[0-9]+:role/iam::XXXXXXXXXXXX:role/' ~/dot-files/.bash_functions
-   cp ~/.zshrc ~/dot-files/.zshrc
+   cp ~/.bashrc ~/dot-files/.bashrc
+   cp ~/.vimrc ~/dot-files/.vimrc
+   cp ~/.config/nvim/init.vim ~/dot-files/.config/nvim/init.vim
+   cp ~/.tmux.conf ~/dot-files/.tmux.conf
    echo "Done!" ; echo "Brew bundle dump!"
    rm Brewfile
    brew bundle dump
