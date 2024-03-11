@@ -15,7 +15,6 @@ alias gitlog="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow
 #Info
 alias help2="tldr"
 alias space="ncdu"
-alias sysinfo="neofetch | lolcat"
 alias df="df -h"
 alias procs='ps -eo pid,user,stime,etime,cmd'
 alias ports='netstat -anp | grep -i listen'

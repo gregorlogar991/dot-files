@@ -11,6 +11,9 @@ mv_files () {
    cp ~/.functions ~/dot-files/.functions
    sed -i -E 's/iam::[0-9]+:role/iam::XXXXXXXXXXXX:role/' ~/dot-files/.bash_functions
    cp ~/.zshrc ~/dot-files/.zshrc
+   echo "k9s"
+   cp "/Users/g.logar/Library/Application Support/k9s/aliases.yaml" ~/dot-files/k9s/
+   cp "/Users/g.logar/Library/Application Support/k9s/mts-version.sh" ~/dot-files/k9s/
    echo "Done!" ; echo "Brew bundle dump!"
    rm Brewfile
    brew bundle dump
