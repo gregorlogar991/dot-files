@@ -40,7 +40,7 @@ gadd() {
 #### DOCKER ####
 
 kafka-ui() {
-    docker run -it -p 8080:8080 --name kafkaui --rm -d -e DYNAMIC_CONFIG_ENABLED=true -v ~/kafka/clusters.yaml:/etc/kafkaui/dynamic_config.yaml docker.io/provectuslabs/kafka-ui:latest
+    docker run -it -p 127.0.0.1:8080:8080 --name kafkaui --rm -d -e DYNAMIC_CONFIG_ENABLED=true -v ~/kafka/clusters.yaml:/etc/kafkaui/dynamic_config.yaml docker.io/provectuslabs/kafka-ui:latest
 }
 
 colima_restart() {
@@ -58,7 +58,7 @@ naabu() {
 }
 
 jenkins-local() {
-    docker run --name local-jenkins --rm  -d -p 50000:50000 -p 8080:8080 -v /Users/glogar/local-jenkins:/var/jenkins_home jenkins/jenkins
+    docker run --name local-jenkins --rm  -d -p 127.0.0.1:50000:50000 -p 127.0.0.1:8080:8080 -v /Users/glogar/local-jenkins:/var/jenkins_home jenkins/jenkins
 }
 
 #### K8s ####
