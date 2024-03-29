@@ -10,6 +10,7 @@ alias weatherRib='curl wttr.in/Ribnica'
 
 #GIT
 alias g="git"
+alias gs="git status"
 alias gitlog="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 #Info
