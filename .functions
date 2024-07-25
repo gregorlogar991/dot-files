@@ -1,4 +1,4 @@
-function write_line() {
+write_line() {
     LINES=10
     if [[ ${1} =~ ^[0-9]+$ ]]; then
         LINES=${1}
@@ -119,4 +119,8 @@ function host2() {
 
 function b64d() {
     echo $1 | base64 -d
+}
+
+check-cert() {
+    openssl s_client -connect ${1} -showcerts | openssl x509 -noout -text
 }

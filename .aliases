@@ -10,6 +10,7 @@ alias weatherRib='curl wttr.in/Ribnica'
 
 #GIT
 alias g="git"
+alias df="git diff"
 alias gs="git status"
 alias gitlog="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
@@ -37,9 +38,6 @@ alias mkdir="mkdir -p"
 #Tools
 alias vim="hx"
 alias k="kubectl"
-#alias kubectl="kubecolor --kubecolor-theme=protanopia-dark"
-# make completion work with kubecolor
-#compdef kubecolor=kubectl
 alias kr="kubectl run"
 alias ke="kubectl edit"
 alias kd="kubectl describe"
@@ -50,7 +48,7 @@ alias kcntx="kubectl config current-context"
 alias tf="terraform"
 
 #AWS
-alias awsCredentials="aws sts get-caller-identity"
+alias awswhoami="aws sts get-caller-identity"
 
 # Nav
 alias cd..="cd .."
