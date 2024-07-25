@@ -1,5 +1,12 @@
 #Tools
 eval "$(starship init zsh)"
+
+autoload -U +X compinit && compinit
+source <(kubectl completion zsh)
+alias kubectl=kubecolor
+# make completion work with kubecolor
+compdef kubecolor=kubectl
+
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 #Source
@@ -7,23 +14,21 @@ source ~/.aliases
 source ~/.functions
 
 #History
+HISTFILE=~/.zsh_history
 HISTSIZE=999999999
 SAVEHIST=$HISTSIZE
-setopt SHARE_HISTORY
-
-#kubectl autocompletion
-autoload -Uz compinit
-compinit
-source <(kubectl completion zsh)
 
 # HSTR configuration - add this to ~/.zshrc
 # HSTR configuration - add this to ~/.zshrc
 alias hh=hstr                    # hh to be alias for hstr
 setopt histignorespace           # skip cmds w/ leading space from history
+setopt hist_ignore_all_dups
+setopt share_history
 export HSTR_CONFIG=hicolor,raw-history-view       # get more colors
-export HISTFILE=~/.zsh_history
 #bindkey -s "\C-r" "\C-a hstr -- \C-j"     # bind hstr to Ctrl-r (for Vi mode check doc)
 export HSTR_TIOCSTI=y
 
 export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+eval "$(direnv hook zsh)"

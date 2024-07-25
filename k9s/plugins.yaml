@@ -66,3 +66,44 @@ plugins:
     - $NAMESPACE
     - --context
     - $CONTEXT
+  stern:
+    shortCut: Shift-K
+    confirm: false
+    description: "Logs <Stern>"
+    scopes:
+      - pods
+    command: stern
+    background: false
+    args:
+      - --tail
+      - 50
+      - $FILTER
+      - -n
+      - $NAMESPACE
+      - --context
+      - $CONTEXT
+  debug:
+    shortCut: Shift-D
+    description: Debug
+    dangerous: true
+    scopes:
+      - containers
+    command: bash
+    background: false
+    confirm: true
+    args:
+      - -c
+      - kubectl debug -it --context $CONTEXT -n=$NAMESPACE $POD --target=$NAME --image=busybox -- sh
+  debug-copy:
+    shortCut: Shift-D
+    description: DebugCopy
+    dangerous: true
+    scopes:
+      # - containers
+      - pod
+    command: bash
+    background: false
+    confirm: true
+    args:
+      - -c
+      - kubectl debug -it --context $CONTEXT -n=$NAMESPACE $NAME --image=busybox --share-processes --copy-to $NAME-debug -- sh
