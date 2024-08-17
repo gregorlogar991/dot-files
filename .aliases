@@ -23,14 +23,16 @@ alias ports='netstat -anp | grep -i listen'
 alias hh="hstr"
 
 #Files
-alias ll='exa --icons --group-directories-first -l --git -g --time modified --sort newest'
-alias ls='exa --icons --group-directories-first'
+alias cd='z'
+alias ll='eza --icons --group-directories-first -l --git -g --time modified --sort newest'
+alias ls='eza --icons --group-directories-first'
 alias lls='ls --human-readable --size -1 -S --classify'
 alias llt='ls -t -1'
 alias count='find . -type f | wc -l'
 alias cpv='rsync -ah --info=progress2'
 alias cls='clear'
-alias cat="bat"
+alias cat="bat --theme ansi"
+alias catn="bat --style plain --theme ansi"
 alias tree="exa --tree --icons"
 alias tree2="broot"
 alias mkdir="mkdir -p"

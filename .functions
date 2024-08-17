@@ -37,6 +37,10 @@ gadd() {
 	git commit -m "$1"
 }
 
+batdiff() {
+    git diff --name-only --relative --diff-filter=d | xargs bat --diff
+}
+
 #### DOCKER ####
 
 kafka-ui() {
