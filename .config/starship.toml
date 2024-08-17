@@ -1,0 +1,24 @@
+[kubernetes]
+disabled = false
+#style = "bg:#3C4251"
+#style = "fg:#C83094"
+style = "fg:#2AFFA8"
+symbol = "☸ "
+format = '[$symbol$context(:\($namespace\))]($style) in '
+detect_extensions = []
+detect_files = []
+detect_folders = []
+contexts = []
+
+
+[python]
+disabled = true
+
+[nodejs]
+disabled = true 
+
+[time]
+disabled = false
+
+[git_branch]
+style = "fg:#C853FF"
