@@ -1,10 +1,11 @@
 #Tools
 eval "$(starship init zsh)"
 
-# if type brew &>/dev/null; then
-#     FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-# fi
-autoload --U +X compinit && compinit
+if type brew &>/dev/null; then
+    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+fi
+
+autoload -U +X compinit && compinit
 
 #Source
 source ~/.aliases
@@ -51,4 +52,5 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:complete:z:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'

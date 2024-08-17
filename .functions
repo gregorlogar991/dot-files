@@ -7,21 +7,6 @@ write_line() {
     echo ""
 }
 
-function coffee() {
-    if [[ ! -v COFFEE_PID ]]; then
-        export COFFEE_PID=$!
-        echo "Running 'caffeinate' in the background."
-        echo "PID: ${COFFEE_PID}"
-    else
-    if [[ $(ps aux | grep "$COFFEE_PID" | grep "caffeinate" | wc -l) -gt 0 ]]; then
-        echo "Killing 'caffeinate' process with PID ${COFFEE_PID}"
-        kill "${COFFEE_PID}"
-        unset COFFEE_PID
-        else
-            echo "This process ID is not from caffeinate! Please kill the process manually!"
-        fi
-    fi
-}
 
 # Create a new directory and enter it
 function mkd() {
@@ -53,29 +38,9 @@ colima_restart() {
     colima start --arch aarch64 --vm-type=vz --vz-rosetta --memory 8
 }
 
-wuzz() {
-    docker run --rm -it --name wuzz gregorlogar991/wuzz:v0.5.0
-}
 
 naabu() {
    docker run --rm projectdiscovery/naabu $@
-}
-
-jenkins-local() {
-    docker run --name local-jenkins --rm  -d -p 127.0.0.1:50000:50000 -p 127.0.0.1:8080:8080 -v /Users/glogar/local-jenkins:/var/jenkins_home jenkins/jenkins
-}
-
-#### K8s ####
-kn() {
-    if [ "$1" != "" ]; then
-        kubectl config set-context --current --namespace=$1
-    else
-        echo -e "\e[1;31m Error, please provide a valid Namespace\e[0m"
-    fi
-}
-
-knd() {
-    kubectl config set-context --current --namespace=default
 }
 
 ####  ####
