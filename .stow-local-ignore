@@ -1,2 +1,3 @@
-\.gitignore
-Brewfile
+/.gitignore
+/export.sh
+/.git
