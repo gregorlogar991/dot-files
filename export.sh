@@ -7,10 +7,7 @@ mv_files () {
    echo "Exporting profiles!"
 
    cp -r ~/.config/helix ~/dot-files/.config/
-   cp ~/.aliases ~/dot-files/.aliases
-   cp ~/.functions ~/dot-files/.functions
    sed -i -E 's/iam::[0-9]+:role/iam::XXXXXXXXXXXX:role/' ~/dot-files/.bash_functions
-   cp ~/.zshrc ~/dot-files/.zshrc
    echo "k9s"
    cp "/Users/g.logar/Library/Application Support/k9s/plugins.yaml" ~/dot-files/k9s/
    cp "/Users/g.logar/Library/Application Support/k9s/mts-version.sh" ~/dot-files/k9s/
