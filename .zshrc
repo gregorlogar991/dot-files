@@ -11,6 +11,7 @@ autoload -U +X compinit && compinit
 source ~/.aliases
 source ~/.functions
 source ~/.zsh-plugins/git.plugin.zsh
+source ~/.sportradar
 
 #History
 HISTFILE=~/.zsh_history
@@ -36,7 +37,7 @@ export PATH="/Users/g.logar/go/bin:$PATH"
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[ -f ~/fzf-tab/fzf-tab.plugin.zsh ] && source ~/fzf-tab/fzf-tab.plugin.zsh
+#[ -f ~/fzf-tab/fzf-tab.plugin.zsh ] && source ~/fzf-tab/fzf-tab.plugin.zsh
 
 eval "$(direnv hook zsh)"
 export PATH="/opt/homebrew/opt/mongodb-community@4.4/bin:$PATH"
@@ -60,3 +61,10 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/g.logar/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
+--color=selected-bg:#45475a \
+--multi"
