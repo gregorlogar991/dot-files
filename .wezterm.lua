@@ -5,7 +5,7 @@ local act = wezterm.action
 config = {
 	-- FONT
 	font = wezterm.font("MesloLGS Nerd Font Mono"),
-	font_size = 15,
+	font_size = 14,
 	color_scheme = "Catppuccin Mocha",
 
 	-- GENERAL
@@ -13,9 +13,11 @@ config = {
 	automatically_reload_config = true,
 
 	-- WINDOW
+	initial_rows = 60,
+  initial_cols = 150,
 	window_decorations = "RESIZE",
 	window_padding = {
-	 	top = 20,
+    top = 20,
 	 	right = 3,
 	 	bottom = 0,
 	 	left = 20,
@@ -33,8 +35,8 @@ config = {
   -- KEYS
 	keys = {
 	  {
-	    mods   = "LEADER",
-	    key    = "-",
+      mods   = "LEADER",
+      key    = "-",
 	    action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' }
 	  },
 	  {
@@ -43,68 +45,80 @@ config = {
 	    action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' }
   	},
   	{
-    	mods = 'LEADER',
-    	key = 'm',
+    	mods   = 'LEADER',
+    	key    = 'm',
     	action = wezterm.action.TogglePaneZoomState
   	},
   	{
-	    mods = 'LEADER',
-	    key = '0',
+	    mods   = 'LEADER',
+	    key    = '0',
 	    action = wezterm.action.PaneSelect {
       	mode = 'SwapWithActive',
     	}
   	},
   	{
-  		mods = 'LEADER',
-  		key = 'LeftArrow',
+  		mods   = 'LEADER',
+  		key    = 'LeftArrow',
   		action = act.AdjustPaneSize { "Left", 5 },
   	},
   	{
-  		mods = 'LEADER',
-  		key = 'RightArrow',
+  		mods   = 'LEADER',
+  		key    = 'RightArrow',
   		action = act.AdjustPaneSize { "Right", 5 },
   	},
   	{
-  		mods = 'LEADER',
-  		key = 'UpArrow',
+  		mods   = 'LEADER',
+  		key    = 'UpArrow',
   		action = act.AdjustPaneSize { "Up", 5 },
   	},
   	{
-  		mods = 'LEADER',
-  		key = 'DownArrow',
+  		mods   = 'LEADER',
+  		key    = 'DownArrow',
   		action = act.AdjustPaneSize { "Down", 5 },
   	},
-  	{ key = 'b', mods = 'CTRL', action = act.ActivateTabRelative(-1) },
-  	{ key = 'n', mods = 'CTRL', action = act.ActivateTabRelative(1) },
-  	{ key = 'c', mods = 'LEADER', action = act.SwitchToWorkspace },
   	{
-        mods = "CTRL",
-        key = "x",
-        action = wezterm.action.CloseCurrentPane { confirm = true }
+  	  mods   = 'CTRL', 
+  	  key    = 'b',
+  	  action = act.ActivateTabRelative(-1)
+  	},
+  	{ 
+      mods   = 'CTRL',
+      key    = 'n',
+  	  action = act.ActivateTabRelative(1)
+  	},
+  	{ 
+      mods   = 'LEADER',
+  	  key    = 'c',
+  	  action = act.SwitchToWorkspace 
+  	},
+  	{
+      mods   = "CTRL",
+      key    = "x",
+      action = wezterm.action.CloseCurrentPane { confirm = true }
     },
     {
-        mods = "CTRL",
-        key = "h",
-        action = wezterm.action.ActivatePaneDirection "Left"
+      mods   = "CTRL",
+      key    = "h",
+      action = wezterm.action.ActivatePaneDirection "Left"
     },
     {
-        mods = "CTRL",
-        key = "j",
-        action = wezterm.action.ActivatePaneDirection "Down"
+      mods   = "CTRL",
+      key    = "j",
+      action = wezterm.action.ActivatePaneDirection "Down"
     },
     {
-        mods = "CTRL",
-        key = "k",
-        action = wezterm.action.ActivatePaneDirection "Up"
+      mods   = "CTRL",
+      key    = "k",
+      action = wezterm.action.ActivatePaneDirection "Up"
     },
     {
-        mods = "CTRL",
-        key = "l",
-        action = wezterm.action.ActivatePaneDirection "Right"
+      mods   = "CTRL",
+      key    = "l",
+      action = wezterm.action.ActivatePaneDirection "Right"
     },
     {
-      key = ',',
-      mods = 'LEADER',
+      mods   = 'LEADER',
+      key    = ',',
       action = act.PromptInputLine {
         description = 'Enter new name for tab',
         action = wezterm.action_callback(function(window, pane, line)
@@ -115,8 +129,8 @@ config = {
       },
     },
     {
-      key = '.',
-      mods = 'LEADER',
+      mods   = 'LEADER',
+      key    = '.',
       action = act.PromptInputLine {
         description = 'Enter new name for workspace',
         action = wezterm.action_callback(function(window, pane, line)
@@ -130,8 +144,8 @@ config = {
       },
     },
     {
-      key = 's',
-      mods = 'LEADER',
+      mods   = 'LEADER',
+      key    = 's',
       action = act.ShowLauncherArgs {
         flags = 'FUZZY|WORKSPACES',
       },
@@ -142,10 +156,10 @@ config = {
 wezterm.on("update-right-status", function(window, _)
     local SOLID_LEFT_ARROW = ""
     local ARROW_FOREGROUND = { Foreground = { Color = "#b7bdf8" } }
-    local prefix = ""
+    local prefix           = ""
 
     if window:leader_is_active() then
-        prefix = " " .. utf8.char(0x1f30a) -- ocean wave
+        prefix           = " " .. utf8.char(0x1f30a) -- ocean wave
         SOLID_LEFT_ARROW = utf8.char(0xe0b2)
     end
 
