@@ -14,12 +14,12 @@ config = {
 
 	-- WINDOW
 	window_decorations = "RESIZE",
-	-- window_padding = {
-	-- 	top = 20,
-	-- 	right = 3,
-	-- 	bottom = 0,
-	-- 	left = 20,
-	-- },
+	window_padding = {
+	 	top = 20,
+	 	right = 3,
+	 	bottom = 0,
+	 	left = 20,
+	},
 
 	-- TAB
   hide_tab_bar_if_only_one_tab = false,
@@ -28,7 +28,7 @@ config = {
   tab_and_split_indices_are_zero_based = false,
 	 
 	-- TMUX LEADER
-	leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 2000 },
+	leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 5000 },
 
   -- KEYS
 	keys = {
