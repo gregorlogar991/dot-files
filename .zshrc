@@ -45,6 +45,8 @@ export PATH="/opt/homebrew/opt/mongodb-community@4.4/bin:$PATH"
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source <(kubectl-argo-rollouts completion zsh)
+source <(stern --completion=zsh)
+
 eval "$(zoxide init zsh)"
 source <(kubectl completion zsh)
 alias kubectl=kubecolor
@@ -68,3 +70,5 @@ export FZF_DEFAULT_OPTS=" \
 --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
 --color=selected-bg:#45475a \
 --multi"
+
+export EDITOR=hx

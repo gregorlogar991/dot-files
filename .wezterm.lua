@@ -11,7 +11,8 @@ config = {
 	-- GENERAL
 	send_composed_key_when_left_alt_is_pressed = true,
 	automatically_reload_config = true,
-
+  scrollback_lines = 10000,
+  
 	-- WINDOW
 	initial_rows = 60,
   initial_cols = 150,
@@ -85,6 +86,16 @@ config = {
       mods   = 'CTRL',
       key    = 'n',
   	  action = act.ActivateTabRelative(1)
+  	},
+  	{ 
+      mods   = 'LEADER',
+      key    = 'n',
+  	  action = act.MoveTabRelative(1)
+  	},
+    { 
+      mods   = 'LEADER',
+      key    = 'b',
+  	  action = act.MoveTabRelative(-1)
   	},
   	{ 
       mods   = 'LEADER',
