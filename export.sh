@@ -4,11 +4,7 @@ CUR_DATE="$(date +"%y%m%d")"
 usage() { echo "Usage: $0 [git|export|all]" 1>&2; exit 1; }
 
 mv_files () {
-   echo "Exporting profiles!"
-
-   cp -r ~/.config/helix ~/dot-files/.config/
-   sed -i -E 's/iam::[0-9]+:role/iam::XXXXXXXXXXXX:role/' ~/dot-files/.bash_functions
-   echo "k9s"
+   echo "Exporting"
    cp "/Users/g.logar/Library/Application Support/k9s/plugins.yaml" ~/dot-files/k9s/
    cp "/Users/g.logar/Library/Application Support/k9s/mts-version.sh" ~/dot-files/k9s/
    echo "Done!" ; echo "Brew bundle dump!"

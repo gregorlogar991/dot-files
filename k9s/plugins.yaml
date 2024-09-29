@@ -1,0 +1,109 @@
+plugins:
+  mtsver:
+    shortCut: Ctrl-V
+    description: "MTS Versions"
+    scopes:
+      - pods
+    command: /Users/g.logar/scripts/mts-version.sh
+    background: false
+    args:
+    - -C
+    - $CONTEXT
+    - -n
+    - $NAMESPACE
+    - -c
+    - mts-app
+  raw-logs-follow:
+    shortCut: Ctrl-O
+    description: logs -f
+    scopes:
+    - po
+    command: kubectl
+    background: false
+    args:
+    - logs
+    - -f
+    - $NAME
+    - -n
+    - $NAMESPACE
+    - --context
+    - $CONTEXT
+  log-less:
+    shortCut: Shift-L
+    description: "logs|less"
+    scopes:
+    - po
+    command: bash
+    background: false
+    args:
+    - -c
+    - '"$@" | less'
+    - dummy-arg
+    - kubectl
+    - logs
+    - $NAME
+    - -n
+    - $NAMESPACE
+    - --context
+    - $CONTEXT
+  log-less-container:
+    shortCut: Shift-L
+    description: "logs|less"
+    scopes:
+    - containers
+    command: bash
+    background: false
+    args:
+    - -c
+    - '"$@" | less'
+    - dummy-arg
+    - kubectl
+    - logs
+    - -c
+    - $NAME
+    - $POD
+    - -n
+    - $NAMESPACE
+    - --context
+    - $CONTEXT
+  stern:
+    shortCut: Shift-K
+    confirm: false
+    description: "Logs <Stern>"
+    scopes:
+      - pods
+    command: stern
+    background: false
+    args:
+      - --tail
+      - 50
+      - $FILTER
+      - -n
+      - $NAMESPACE
+      - --context
+      - $CONTEXT
+  debug:
+    shortCut: Shift-D
+    description: Debug
+    dangerous: true
+    scopes:
+      - containers
+    command: bash
+    background: false
+    confirm: true
+    args:
+      - -c
+      - kubectl debug -it --context $CONTEXT -n=$NAMESPACE $POD --target=$NAME --image=busybox -- sh
+  debug-copy:
+    shortCut: Shift-D
+    description: DebugCopy
+    dangerous: true
+    scopes:
+      # - containers
+      - pod
+    command: bash
+    background: false
+    confirm: true
+    args:
+      - -c
+      - kubectl debug -it --context $CONTEXT -n=$NAMESPACE $NAME --image=busybox --share-processes --copy-to $NAME-debug -- sh
