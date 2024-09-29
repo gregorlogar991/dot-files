@@ -40,7 +40,7 @@ alias mkdir="mkdir -p"
 alias fzfp="fzf --preview='bat {}'"
 
 #Tools
-alias vim="hx"
+alias vim="nvim"
 alias k="kubectl"
 alias kr="kubectl run"
 alias ke="kubectl edit"

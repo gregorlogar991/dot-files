@@ -71,4 +71,4 @@ export FZF_DEFAULT_OPTS=" \
 --color=selected-bg:#45475a \
 --multi"
 
-export EDITOR=hx
+export EDITOR=nvim
