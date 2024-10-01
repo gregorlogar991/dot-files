@@ -34,7 +34,7 @@ export HSTR_TIOCSTI=y
 export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
 export PATH="/Users/g.logar/mssh/bin:$PATH"
 export PATH="/Users/g.logar/go/bin:$PATH"
-
+export PATH="/opt/homebrew/opt/mysql-client@8.4/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 #[ -f ~/fzf-tab/fzf-tab.plugin.zsh ] && source ~/fzf-tab/fzf-tab.plugin.zsh
