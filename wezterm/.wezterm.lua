@@ -7,7 +7,7 @@ config = {
 	font = wezterm.font("Hack Nerd Font Mono"),
 	font_size = 14,
 	color_scheme = "Catppuccin Mocha",
-
+	freetype_load_target = "Light",
 	-- GENERAL
 	send_composed_key_when_left_alt_is_pressed = true,
 	automatically_reload_config = true,
