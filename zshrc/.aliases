@@ -32,7 +32,7 @@ alias llt='ls -t -1'
 alias count='find . -type f | wc -l'
 alias cpv='rsync -ah --info=progress2'
 alias cls='clear'
-alias cat="bat --theme='Catppuccin Mocha'"
+alias cat="bat"
 alias catn="bat --style plain --theme ansi"
 alias tree="eza --tree --icons"
 alias tree2="broot"
