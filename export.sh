@@ -3,11 +3,9 @@
 CUR_DATE="$(date +"%y%m%d")"
 usage() { echo "Usage: $0 [git|export|all]" 1>&2; exit 1; }
 
-mv_files () {
-   echo "Exporting"
-   cp "/Users/g.logar/Library/Application Support/k9s/plugins.yaml" ~/dot-files/k9s/
-   cp "/Users/g.logar/Library/Application Support/k9s/mts-version.sh" ~/dot-files/k9s/
-   echo "Done!" ; echo "Brew bundle dump!"
+export_files () {
+   cp "~/Library/Application Support/k9s/plugins.yaml" ~/dot-files/k9s/
+   cp "~/Library/Application Support/k9s/mts-version.sh" ~/dot-files/k9s/
    rm Brewfile
    brew bundle dump
    echo "Done!"
@@ -33,10 +31,10 @@ case "$1" in
       push_to_git
       ;;
    "export")
-      mv_files
+      export_files
       ;;
    "all")
-      mv_files
+      export_files
       push_to_git
       ;;
    *)
