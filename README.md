@@ -30,6 +30,14 @@ brew bundle install --file=./Brewfile
 stow
 ```
 
+- [ ] Configure mac
+
+```sh
+./macos-defaults.sh
+```
+
+- [ ] Restart computer
+
 ## Uninstall
 
 ```sh
