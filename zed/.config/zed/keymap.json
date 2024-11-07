@@ -1,0 +1,16 @@
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-shift-a": "workspace::NewTerminal",
+      "cmd-đ": "terminal_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-tab": "pane::ActivateNextItem",
+      "ctrl-shift-t": "pane::ActivatePrevItem"
+    }
+  }
+]
