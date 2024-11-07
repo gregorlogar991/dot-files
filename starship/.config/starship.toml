@@ -47,7 +47,7 @@ contexts = []
 disabled = true
 
 [nodejs]
-disabled = true 
+disabled = true
 
 [time]
 disabled = false
@@ -56,7 +56,7 @@ disabled = false
 
 [aws]
 style = "bold red"
-symbol = "  "
+symbol = ""
 format = '[$symbol($profile )(\($region\)) ]($style)'
 
 

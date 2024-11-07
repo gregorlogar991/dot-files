@@ -32,6 +32,7 @@ export PATH="/Users/g.logar/go/bin:$PATH"
 export PATH="/opt/homebrew/opt/mysql-client@8.4/bin:$PATH"
 export PATH="/opt/homebrew/opt/mongodb-community@4.4/bin:$PATH"
 export PATH="/Users/g.logar/.rd/bin:$PATH"
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/amazon-corretto-17.jdk/Contents/Home/
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 #[ -f ~/fzf-tab/fzf-tab.plugin.zsh ] && source ~/fzf-tab/fzf-tab.plugin.zsh
