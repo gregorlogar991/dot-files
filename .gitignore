@@ -1,4 +1,4 @@
 .DS_Store
 
 zed/*
-!zed/*.json
+!zed/.config/zed/*.json
