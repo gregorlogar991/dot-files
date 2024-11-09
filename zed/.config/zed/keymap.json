@@ -45,15 +45,32 @@
   {
     "bindings": {
       "cmd-đ": "terminal_panel::ToggleFocus",
-      "alt-g": ["task::Spawn", { "task_name": "lazygit" }]
-      // "alt+n": "pane::ActivateNextItem",
-      // "alt+b": "pan::ActivatePrevItem",
+      "alt-g": ["task::Spawn", { "task_name": "lazygit" }],
+      "cmd-ž": "project_panel::ToggleFocus",
+      "ctrl-right": "pane::ActivateNextItem",
+      "ctrl-left": "pane::ActivatePrevItem"
     }
   },
   {
     "context": "Terminal",
     "bindings": {
       "cmd-n": "workspace::NewTerminal"
+    }
+  },
+  {
+    "context": "vim_mode == normal",
+    "bindings": {
+      "space c": "pane::CloseActiveItem",
+      "space h": ["workspace::ActivatePaneInDirection", "Left"],
+      "space l": ["workspace::ActivatePaneInDirection", "Right"],
+      "space k": ["workspace::ActivatePaneInDirection", "Up"],
+      "space j": ["workspace::ActivatePaneInDirection", "Down"],
+      "space left": ["workspace::ActivatePaneInDirection", "Left"],
+      "space right": ["workspace::ActivatePaneInDirection", "Right"],
+      "space up": ["workspace::ActivatePaneInDirection", "Up"],
+      "space down": ["workspace::ActivatePaneInDirection", "Down"],
+      "space |": "pane::SplitVertical",
+      "space -": "pane::SplitHorizontal"
     }
   }
 ]
