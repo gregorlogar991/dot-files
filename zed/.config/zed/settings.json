@@ -15,8 +15,8 @@
     "version": "2"
   },
   "vim_mode": true,
-  "ui_font_size": 15,
-  "buffer_font_size": 15,
+  "ui_font_size": 14,
+  "buffer_font_size": 14,
   "theme": {
     "mode": "system",
     "light": "Catppuccin Mocha",
@@ -25,5 +25,9 @@
   "terminal": {
     "font_family": "Hack Nerd Font Mono",
     "font_size": 14
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
   }
 }

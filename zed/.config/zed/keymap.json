@@ -44,9 +44,9 @@
   },
   {
     "bindings": {
-      "cmd-đ": "terminal_panel::ToggleFocus",
+      "cmd-ž": "terminal_panel::ToggleFocus",
       "alt-g": ["task::Spawn", { "task_name": "lazygit" }],
-      "cmd-ž": "project_panel::ToggleFocus",
+      "cmd-đ": "project_panel::ToggleFocus",
       "ctrl-right": "pane::ActivateNextItem",
       "ctrl-left": "pane::ActivatePrevItem"
     }
