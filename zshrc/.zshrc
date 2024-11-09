@@ -23,8 +23,7 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
-alias hh=hstr                    # hh to be alias for hstr
-
+alias hh=hstr
 
 export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
 export PATH="/Users/g.logar/mssh/bin:$PATH"
@@ -46,7 +45,7 @@ source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source <(kubectl-argo-rollouts completion zsh)
 source <(stern --completion=zsh)
-source <(kubectl completion zsh)
+source <(kubectl completion zsh 2>/dev/null)
 
 alias kubectl=kubecolor
 # make completion work with kubecolor
@@ -69,3 +68,7 @@ export FZF_DEFAULT_OPTS=" \
 --color=selected-bg:#45475a \
 --multi"
 export EDITOR=nvim
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/g.logar/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
