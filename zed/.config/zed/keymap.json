@@ -45,10 +45,7 @@
   {
     "bindings": {
       "cmd-ž": "terminal_panel::ToggleFocus",
-      "alt-g": ["task::Spawn", { "task_name": "lazygit" }],
-      "cmd-đ": "project_panel::ToggleFocus",
-      "ctrl-right": "pane::ActivateNextItem",
-      "ctrl-left": "pane::ActivatePrevItem"
+      "cmd-đ": "project_panel::ToggleFocus"
     }
   },
   {
@@ -70,7 +67,8 @@
       "space up": ["workspace::ActivatePaneInDirection", "Up"],
       "space down": ["workspace::ActivatePaneInDirection", "Down"],
       "space |": "pane::SplitVertical",
-      "space -": "pane::SplitHorizontal"
+      "space -": "pane::SplitHorizontal",
+      "space g g": ["task::Spawn", { "task_name": "lazygit" }]
     }
   }
 ]
